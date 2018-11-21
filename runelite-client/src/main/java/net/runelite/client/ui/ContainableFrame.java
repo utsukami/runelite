@@ -132,7 +132,8 @@ public class ContainableFrame extends JFrame
 				expandedClientOppositeDirection = true;
 			}
 
-			setBounds(newWindowX, getY(), newWindowWidth, getHeight());
+			setSize(newWindowWidth, getHeight());
+			setLocation(newWindowX, getY());
 		}
 
 		revalidateMinimumSize();
@@ -169,7 +170,8 @@ public class ContainableFrame extends JFrame
 			newWindowX = getX();
 		}
 
-		setBounds(newWindowX, getY(), newWindowWidth, getHeight());
+		setSize(newWindowWidth, getHeight());
+		setLocation(newWindowX, getY());
 		expandedClientOppositeDirection = false;
 	}
 
